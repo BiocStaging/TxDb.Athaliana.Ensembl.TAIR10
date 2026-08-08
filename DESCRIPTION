@@ -1,0 +1,57 @@
+Package: TxDb.Athaliana.Ensembl.TAIR10
+Title: Transcripts Annotation Database for Arabidopsis thaliana
+Version: 0.99.0
+Authors@R:
+    c(
+      person("Dwijesh Chandra", "Mishra",
+             role="aut",
+             email="dwij.mishra@gmail.com",
+             comment=c(ORCID="0000-0002-3327-6156")),
+      person("Sharanbasappa D", "Madival",
+             role="aut",
+             email="smadival509@gmail.com",
+             comment=c(ORCID="0000-0002-6571-9070")),
+      person("Kabilan", "S",
+             role=c("aut","cre"),
+             email="kabilan151414@gmail.com",
+             comment=c(ORCID="0009-0002-9422-0938")),
+      person("ICAR-IARI",
+             role="fnd",
+             email="info@iari.res.in")
+    )
+Description:
+    TxDb.Athaliana.Ensembl.TAIR10 provides transcript, exon, CDS, and gene 
+    annotations for Arabidopsis thaliana based on the TAIR10 reference genome 
+    and Ensembl Plants release 63. The TxDb object is built from the Ensembl 
+    Plants GFF3 annotation and can be queried using GenomicFeatures accessors 
+    such as genes(), transcripts(), exonsBy(), and cdsBy().
+Depends:
+    R (>= 4.6.0)
+Imports:
+    AnnotationDbi,
+    DBI,
+    RSQLite,
+    rappdirs,
+    GenomicFeatures
+Suggests:
+    BiocManager,
+    BiocStyle,
+    GenomeInfoDb,
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+License: Artistic-2.0
+Encoding: UTF-8
+URL:
+    https://github.com/kabilanbio/TxDb.Athaliana.Ensembl.TAIR10
+BugReports:
+    https://github.com/kabilanbio/TxDb.Athaliana.Ensembl.TAIR10/issues
+biocViews:
+    AnnotationData,
+    TxDb,
+    Arabidopsis_thaliana,
+    SequenceAnnotation,
+    AnnotationHub
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0

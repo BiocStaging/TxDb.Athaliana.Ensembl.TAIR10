@@ -1,0 +1,15 @@
+# NEWS for TxDb.Athaliana.Ensembl.TAIR10 Package
+
+## Version 0.99.0 (2026-08-07)
+
+### Initial Release
+
+- First release of the package.
+- The TxDb object provides transcript, exon, and CDS annotations
+  for *Arabidopsis thaliana* based on the TAIR10 reference genome.
+- The annotation was generated from the Ensembl Plants GFF3 annotation
+  (release 63).
+- Included annotation for the five nuclear chromosomes and the
+  mitochondrial and plastid sequences.
+- The TxDb resource was generated using the GenomicFeatures/txdbmaker
+  infrastructure from the Ensembl Plants GFF3 annotation.
