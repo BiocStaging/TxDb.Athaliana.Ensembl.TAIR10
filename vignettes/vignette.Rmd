@@ -25,7 +25,7 @@ Bioconductor packages such as **GenomicFeatures**, **GenomicRanges**,
 
 # Loading the package
 
-```{r}
+```{r loading}
 library(TxDb.Athaliana.Ensembl.TAIR10)
 library(GenomicFeatures)
 library(GenomicRanges)
@@ -35,7 +35,7 @@ library(GenomicRanges)
 
 The TxDb object can be accessed directly after loading the package.
 
-```{r}
+```{r summary}
 TxDb.Athaliana.Ensembl.TAIR10
 ```
 
@@ -44,14 +44,14 @@ TxDb.Athaliana.Ensembl.TAIR10
 The genome information associated with the TxDb can be inspected using
 `seqinfo()`.
 
-```{r}
+```{r chromosome}
 seqinfo(TxDb.Athaliana.Ensembl.TAIR10)
 ```
 
 The available chromosome and sequence names can be retrieved using
 `seqlevels()`.
 
-```{r}
+```{r avl_chromosomes}
 seqlevels(TxDb.Athaliana.Ensembl.TAIR10)
 ```
 
@@ -62,7 +62,7 @@ mitochondrial and plastid sequences of the TAIR10 reference genome.
 
 All annotated genes can be retrieved using `genes()`.
 
-```{r}
+```{r gene_annotations}
 genes(TxDb.Athaliana.Ensembl.TAIR10)
 ```
 
@@ -70,7 +70,7 @@ genes(TxDb.Athaliana.Ensembl.TAIR10)
 
 Transcript models can be retrieved using `transcripts()`.
 
-```{r}
+```{r transcripts_annotations}
 head(transcripts(TxDb.Athaliana.Ensembl.TAIR10))
 ```
 
@@ -78,7 +78,7 @@ head(transcripts(TxDb.Athaliana.Ensembl.TAIR10))
 
 Exon coordinates can be retrieved using `exons()`.
 
-```{r}
+```{r exon_annotations}
 head(exons(TxDb.Athaliana.Ensembl.TAIR10))
 ```
 
@@ -86,7 +86,7 @@ head(exons(TxDb.Athaliana.Ensembl.TAIR10))
 
 Coding sequence coordinates can be retrieved using `cds()`.
 
-```{r}
+```{r cds}
 head(cds(TxDb.Athaliana.Ensembl.TAIR10))
 ```
 
@@ -98,7 +98,7 @@ using the `promoters()` accessor.
 For example, the following extracts regions extending 2 kb upstream and
 200 bp downstream of transcription start sites.
 
-```{r}
+```{r promoters}
 head(promoters(
     TxDb.Athaliana.Ensembl.TAIR10,
     upstream = 2000,
@@ -111,7 +111,7 @@ head(promoters(
 Transcripts can be grouped according to their parent genes using
 `transcriptsBy()`.
 
-```{r}
+```{r transcripts_gene}
 tx_by_gene <- GenomicFeatures::transcriptsBy(
     TxDb.Athaliana.Ensembl.TAIR10,
     by = "gene"
@@ -124,7 +124,7 @@ tx_by_gene
 
 Exons can be grouped by transcript using `exonsBy()`.
 
-```{r}
+```{r exons_transcript}
 exonsBy(
     TxDb.Athaliana.Ensembl.TAIR10,
     by = "tx"
@@ -137,7 +137,7 @@ The TxDb can be used as a source of genomic coordinates for downstream
 Bioconductor workflows. For example, gene and transcript coordinates can
 be converted to `GRanges` objects and used with other genomic datasets.
 
-```{r}
+```{r gene_ranges}
 gene_ranges <- genes(TxDb.Athaliana.Ensembl.TAIR10)
 
 gene_ranges
@@ -145,6 +145,6 @@ gene_ranges
 
 # Session information
 
-```{r}
+```{r sessioninfo, eval=TRUE}
 sessionInfo()
 ```

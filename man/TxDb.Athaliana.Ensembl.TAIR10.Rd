@@ -54,7 +54,7 @@ TxDb.Athaliana.Ensembl.TAIR10
 
 ## retrieve chromosome information
 
-seqinfo(TxDb.Athaliana.Ensembl.TAIR10)
+Seqinfo::seqinfo(TxDb.Athaliana.Ensembl.TAIR10)
 
 ## retrieve all genes
 
