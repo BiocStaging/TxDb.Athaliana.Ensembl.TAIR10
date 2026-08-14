@@ -24,7 +24,7 @@ The TxDb object is not shipped inside the package; it is hosted on
 AnnotationHub and downloaded on first use.
 
 ```r
-library(TxDb.Osativa.MSU.RGAP7)
+library(TxDb.Athaliana.Ensembl.TAIR10)
 library(AnnotationHub)
 library(GenomicFeatures)
 
