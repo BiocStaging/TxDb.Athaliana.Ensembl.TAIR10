@@ -1,6 +1,6 @@
 Package: TxDb.Athaliana.Ensembl.TAIR10
 Title: Transcripts Annotation Database for Arabidopsis thaliana
-Version: 0.99.0
+Version: 0.99.1
 Authors@R:
     c(
       person("Dwijesh Chandra", "Mishra",
@@ -28,15 +28,13 @@ Description:
 Depends:
     R (>= 4.6.0)
 Imports:
-    AnnotationDbi,
-    DBI,
-    RSQLite,
-    rappdirs,
-    GenomicFeatures
+    stats,
+    GenomicFeatures,
+    GenomicRanges,
+    AnnotationHub
 Suggests:
     BiocManager,
     BiocStyle,
-    GenomeInfoDb,
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)

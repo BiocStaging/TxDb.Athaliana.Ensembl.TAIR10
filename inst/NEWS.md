@@ -13,3 +13,7 @@
   mitochondrial and plastid sequences.
 - The TxDb resource was generated using the GenomicFeatures/txdbmaker
   infrastructure from the Ensembl Plants GFF3 annotation.
+
+## Version 0.99.1 (2026-08-15)
+
+- Fixed the bugs.

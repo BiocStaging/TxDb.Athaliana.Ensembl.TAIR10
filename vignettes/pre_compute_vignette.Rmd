@@ -328,7 +328,8 @@ head(promoters(
 ```
 
 ```
-## Warning in valid.GenomicRanges.seqinfo(x, suggest.trim = TRUE): GRanges object contains 7 out-of-bound ranges located on
+## Warning in valid.GenomicRanges.seqinfo(x, suggest.trim = TRUE): GRanges 
+object contains 7 out-of-bound ranges located on
 ##   sequences 2, 3, and 5. Note that ranges located on a
 ##   sequence whose length is unknown (NA) or on a circular
 ##   sequence are not considered out-of-bound (use seqlengths()
