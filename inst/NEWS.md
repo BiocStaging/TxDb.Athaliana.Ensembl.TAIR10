@@ -17,3 +17,7 @@
 ## Version 0.99.1 (2026-08-15)
 
 - Fixed the bugs.
+
+## Version 0.99.2 (2026-08-15)
+
+- Fixed the bugs.
