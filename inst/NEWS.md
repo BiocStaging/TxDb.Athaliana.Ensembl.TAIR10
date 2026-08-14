@@ -1,6 +1,6 @@
 # NEWS for TxDb.Athaliana.Ensembl.TAIR10 Package
 
-## Version 0.99.0 (2026-08-07)
+## Version 0.99.0 (2026-08-15)
 
 ### Initial Release
 

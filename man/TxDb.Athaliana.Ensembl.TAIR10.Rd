@@ -43,41 +43,23 @@ Kabilan S (aut, cre) \email{kabilan151414@gmail.com}
 }
 
 \examples{
+## The TxDb object is downloaded from AnnotationHub, so this example is
+## only run when AnnotationHub is installed and the resource is
+## reachable.
+if (requireNamespace("AnnotationHub", quietly=TRUE)) {
+    txdb <- tryCatch({
+        ah <- AnnotationHub::AnnotationHub()
+        ah[["AH122287"]]
+    }, error=function(e) NULL)
 
-## load the library
-
-library(TxDb.Athaliana.Ensembl.TAIR10)
-
-## show the TxDb object
-
-TxDb.Athaliana.Ensembl.TAIR10
-
-## retrieve chromosome information
-
-Seqinfo::seqinfo(TxDb.Athaliana.Ensembl.TAIR10)
-
-## retrieve all genes
-
-GenomicFeatures::genes(TxDb.Athaliana.Ensembl.TAIR10)
-
-## retrieve transcripts
-
-GenomicFeatures::transcripts(TxDb.Athaliana.Ensembl.TAIR10)
-
-## retrieve exons grouped by transcript
-
-GenomicFeatures::exonsBy(
-    TxDb.Athaliana.Ensembl.TAIR10,
-    by = "tx"
-)
-
-## retrieve CDS grouped by transcript
-
-GenomicFeatures::cdsBy(
-    TxDb.Athaliana.Ensembl.TAIR10,
-    by = "tx"
-)
+    if (!is.null(txdb)) {
+        txdb
+        ## retrieve all genes
+        GenomicFeatures::genes(txdb)
+    }
+}
 }
 
 \keyword{package}
 \keyword{data}
+
