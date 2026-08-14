@@ -21,3 +21,7 @@
 ## Version 0.99.2 (2026-08-15)
 
 - Fixed the bugs.
+
+## Version 0.99.3 (2026-08-15)
+
+- Corrected the `inst/scripts/make-data.R`
