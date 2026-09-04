@@ -29,3 +29,7 @@
 ## Version 0.99.4 (2026-08-15)
 
 - Fixed the bugs.
+
+## Version 0.99.5 (2026-08-15)
+
+- Fixed the WARNINGS.
